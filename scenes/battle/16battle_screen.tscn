@@ -1,0 +1,308 @@
+[gd_scene load_steps=2 format=3 uid="uid://16battle_screen"]
+
+[ext_resource type="Script" path="res://ui/16battle_screen.gd" id="1_script"]
+
+[node name="BattleScreen" type="Control"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_script")
+
+
+[node name="BackgroundRect" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+
+[node name="EnemyArea" type="Control" parent="."]
+layout_mode = 0
+offset_left = 580
+offset_top = 60
+offset_right = 940
+offset_bottom = 280
+
+
+[node name="EnemyNameLabel" type="Label" parent="EnemyArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 360
+offset_bottom = 28
+
+
+[node name="EnemyHpBar" type="TextureRect" parent="EnemyArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 34
+offset_right = 360
+offset_bottom = 58
+
+
+[node name="EnemySpBar" type="TextureRect" parent="EnemyArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 66
+offset_right = 360
+offset_bottom = 90
+
+
+[node name="EnemyAvatar" type="TextureRect" parent="EnemyArea"]
+layout_mode = 0
+offset_left = 60
+offset_top = 100
+offset_right = 300
+offset_bottom = 220
+
+
+[node name="PlayerArea" type="Control" parent="."]
+layout_mode = 0
+offset_left = 20
+offset_top = 260
+offset_right = 380
+offset_bottom = 480
+
+
+[node name="PlayerNameLabel" type="Label" parent="PlayerArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 360
+offset_bottom = 28
+
+
+[node name="PlayerHpBar" type="TextureRect" parent="PlayerArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 34
+offset_right = 360
+offset_bottom = 58
+
+
+[node name="PlayerSpBar" type="TextureRect" parent="PlayerArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 66
+offset_right = 360
+offset_bottom = 90
+
+
+[node name="PlayerAvatar" type="TextureRect" parent="PlayerArea"]
+layout_mode = 0
+offset_left = 60
+offset_top = 100
+offset_right = 300
+offset_bottom = 220
+
+
+[node name="ActionOrder" type="Control" parent="."]
+layout_mode = 0
+offset_left = 400
+offset_top = 80
+offset_right = 560
+offset_bottom = 200
+
+
+[node name="RoundCounter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 440
+offset_top = 44
+offset_right = 520
+offset_bottom = 68
+horizontal_alignment = 1
+
+
+[node name="CombatLog" type="Control" parent="."]
+layout_mode = 0
+offset_left = 20
+offset_top = 500
+offset_right = 940
+offset_bottom = 564
+
+
+[node name="CombatNarrationLabel" type="Label" parent="CombatLog"]
+layout_mode = 0
+offset_left = 8
+offset_top = 4
+offset_right = 912
+offset_bottom = 60
+
+
+[node name="ActionBar" type="Control" parent="."]
+layout_mode = 0
+offset_left = 20
+offset_top = 420
+offset_right = 940
+offset_bottom = 476
+
+
+[node name="AttackButton" type="TextureButton" parent="ActionBar"]
+layout_mode = 0
+
+offset_left = 0
+offset_top = 0
+offset_right = 172
+offset_bottom = 56
+
+[node name="AttackLabel" type="Label" parent="AttackButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 172
+offset_bottom = 56
+text = "攻击"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkillButton" type="TextureButton" parent="ActionBar"]
+layout_mode = 0
+
+offset_left = 184
+offset_top = 0
+offset_right = 356
+offset_bottom = 56
+
+[node name="SkillLabel" type="Label" parent="SkillButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 172
+offset_bottom = 56
+text = "功法(K)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DefendButton" type="TextureButton" parent="ActionBar"]
+layout_mode = 0
+
+offset_left = 368
+offset_top = 0
+offset_right = 540
+offset_bottom = 56
+
+[node name="DefendLabel" type="Label" parent="DefendButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 172
+offset_bottom = 56
+text = "防御"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemButton" type="TextureButton" parent="ActionBar"]
+layout_mode = 0
+
+offset_left = 552
+offset_top = 0
+offset_right = 724
+offset_bottom = 56
+
+[node name="ItemLabel" type="Label" parent="ItemButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 172
+offset_bottom = 56
+text = "物品"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FleeButton" type="TextureButton" parent="ActionBar"]
+layout_mode = 0
+
+offset_left = 736
+offset_top = 0
+offset_right = 920
+offset_bottom = 56
+
+[node name="FleeLabel" type="Label" parent="FleeButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 184
+offset_bottom = 56
+text = "逃跑"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkipAnimToggle" type="TextureButton" parent="."]
+layout_mode = 0
+
+offset_left = 800
+offset_top = 60
+offset_right = 940
+offset_bottom = 96
+
+[node name="SkipAnimToggleLabel" type="Label" parent="SkipAnimToggle"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 140
+offset_bottom = 36
+text = "跳过"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AutoBattleToggle" type="TextureButton" parent="."]
+layout_mode = 0
+
+offset_left = 800
+offset_top = 108
+offset_right = 940
+offset_bottom = 144
+
+[node name="AutoBattleToggleLabel" type="Label" parent="AutoBattleToggle"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 140
+offset_bottom = 36
+text = "自动"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultOverlay" type="Control" parent="."]
+layout_mode = 0
+offset_left = 200
+offset_top = 180
+offset_right = 760
+offset_bottom = 460
+visible = false
+
+
+[node name="ResultTitleLabel" type="Label" parent="ResultOverlay"]
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 560
+offset_bottom = 60
+horizontal_alignment = 1
+
+
+[node name="LootSummaryLabel" type="Label" parent="ResultOverlay"]
+layout_mode = 0
+offset_left = 40
+offset_top = 80
+offset_right = 520
+offset_bottom = 200
+
+
+[node name="ReturnButton" type="TextureButton" parent="ResultOverlay"]
+layout_mode = 0
+
+offset_left = 180
+offset_top = 230
+offset_right = 380
+offset_bottom = 278
+
+[node name="ReturnLabel" type="Label" parent="ReturnButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 200
+offset_bottom = 48
+text = "返回"
+horizontal_alignment = 1
+vertical_alignment = 1
+

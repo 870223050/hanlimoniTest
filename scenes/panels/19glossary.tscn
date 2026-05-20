@@ -1,0 +1,181 @@
+[gd_scene load_steps=2 format=3 uid="uid://19glossary"]
+
+[ext_resource type="Script" path="res://ui/19glossary.gd" id="1_script"]
+
+[node name="GlossaryPanel" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+
+[node name="Overlay" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.0, 0.0, 0.0, 0.5)
+
+
+[node name="PanelFrame" type="Control" parent="."]
+layout_mode = 0
+offset_left = 80
+offset_top = 40
+offset_right = 880
+offset_bottom = 600
+
+
+[node name="TitleBg" type="TextureRect" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 800
+offset_bottom = 40
+
+
+[node name="TitleLabel" type="Label" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 12
+offset_top = 8
+offset_right = 200
+offset_bottom = 32
+text = "图鉴"
+
+
+[node name="CloseButton" type="TextureButton" parent="PanelFrame"]
+layout_mode = 0
+
+offset_left = 760
+offset_top = 4
+offset_right = 792
+offset_bottom = 36
+
+[node name="CloseLabel" type="Label" parent="CloseButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 32
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Content" type="Control" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 0
+offset_top = 44
+offset_right = 800
+offset_bottom = 560
+
+
+[node name="TabTechniques" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 4
+offset_top = 0
+offset_right = 100
+offset_bottom = 32
+
+[node name="TabTechniquesLabel" type="Label" parent="TabTechniques"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 96
+offset_bottom = 32
+text = "功法"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabPills" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 108
+offset_top = 0
+offset_right = 204
+offset_bottom = 32
+
+[node name="TabPillsLabel" type="Label" parent="TabPills"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 96
+offset_bottom = 32
+text = "丹药"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabMonsters" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 212
+offset_top = 0
+offset_right = 308
+offset_bottom = 32
+
+[node name="TabMonstersLabel" type="Label" parent="TabMonsters"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 96
+offset_bottom = 32
+text = "妖兽"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabNPCs" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 316
+offset_top = 0
+offset_right = 412
+offset_bottom = 32
+
+[node name="TabNPCsLabel" type="Label" parent="TabNPCs"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 96
+offset_bottom = 32
+text = "NPC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabLocations" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 420
+offset_top = 0
+offset_right = 516
+offset_bottom = 32
+
+[node name="TabLocationsLabel" type="Label" parent="TabLocations"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 96
+offset_bottom = 32
+text = "地点"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabTutorial" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 524
+offset_top = 0
+offset_right = 620
+offset_bottom = 32
+
+[node name="TabTutorialLabel" type="Label" parent="TabTutorial"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 96
+offset_bottom = 32
+text = "教程"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GlossaryContent" type="Control" parent="Content"]
+layout_mode = 0
+offset_left = 4
+offset_top = 40
+offset_right = 792
+offset_bottom = 516
+

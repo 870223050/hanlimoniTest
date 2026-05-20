@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="hanliMoni"
+run/main_scene="uid://b3xk8q4r3e26"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*res://core/global/game_state.gd"
+EventManager="*res://core/global/event_manager.gd"
+LLMService="*res://core/global/llm_service.gd"
+BattleManager="*res://core/global/battle_manager.gd"
+UIManager="*res://core/global/ui_manager.gd"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

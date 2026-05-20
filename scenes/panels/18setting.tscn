@@ -1,0 +1,273 @@
+[gd_scene load_steps=2 format=3 uid="uid://18setting"]
+
+[ext_resource type="Script" path="res://ui/18setting.gd" id="1_script"]
+
+[node name="SettingPanel" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+
+[node name="Overlay" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.0, 0.0, 0.0, 0.5)
+
+
+[node name="PanelFrame" type="Control" parent="."]
+layout_mode = 0
+offset_left = 200
+offset_top = 80
+offset_right = 760
+offset_bottom = 540
+
+
+[node name="TitleBg" type="TextureRect" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 560
+offset_bottom = 40
+
+
+[node name="TitleLabel" type="Label" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 12
+offset_top = 8
+offset_right = 200
+offset_bottom = 32
+text = "设置"
+
+
+[node name="CloseButton" type="TextureButton" parent="PanelFrame"]
+layout_mode = 0
+
+offset_left = 524
+offset_top = 4
+offset_right = 556
+offset_bottom = 36
+
+[node name="CloseLabel" type="Label" parent="CloseButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 32
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Content" type="Control" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 0
+offset_top = 44
+offset_right = 560
+offset_bottom = 460
+
+
+[node name="VolumeMasterLabel" type="Label" parent="Content"]
+layout_mode = 0
+offset_left = 20
+offset_top = 20
+offset_right = 200
+offset_bottom = 44
+text = "主音量"
+
+
+[node name="VolMasterDown" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 220
+offset_top = 20
+offset_right = 252
+offset_bottom = 44
+
+[node name="VolMasterDownLabel" type="Label" parent="VolMasterDown"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 24
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolMasterUp" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 260
+offset_top = 20
+offset_right = 292
+offset_bottom = 44
+
+[node name="VolMasterUpLabel" type="Label" parent="VolMasterUp"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 24
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeBGMLabel" type="Label" parent="Content"]
+layout_mode = 0
+offset_left = 20
+offset_top = 70
+offset_right = 200
+offset_bottom = 94
+text = "BGM 音量"
+
+
+[node name="VolBGMDown" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 220
+offset_top = 70
+offset_right = 252
+offset_bottom = 94
+
+[node name="VolBGMDownLabel" type="Label" parent="VolBGMDown"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 24
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolBGMUp" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 260
+offset_top = 70
+offset_right = 292
+offset_bottom = 94
+
+[node name="VolBGMUpLabel" type="Label" parent="VolBGMUp"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 24
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextSpeedLabel" type="Label" parent="Content"]
+layout_mode = 0
+offset_left = 20
+offset_top = 120
+offset_right = 200
+offset_bottom = 144
+text = "文本速度"
+
+
+[node name="TextSpeedDown" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 220
+offset_top = 120
+offset_right = 252
+offset_bottom = 144
+
+[node name="TextSpeedDownLabel" type="Label" parent="TextSpeedDown"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 24
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextSpeedUp" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 260
+offset_top = 120
+offset_right = 292
+offset_bottom = 144
+
+[node name="TextSpeedUpLabel" type="Label" parent="TextSpeedUp"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 24
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FullscreenToggle" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 20
+offset_top = 180
+offset_right = 220
+offset_bottom = 224
+
+[node name="FullscreenToggleLabel" type="Label" parent="FullscreenToggle"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 200
+offset_bottom = 44
+text = "全屏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LLMBackendSelect" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 20
+offset_top = 250
+offset_right = 340
+offset_bottom = 294
+
+[node name="LLMBackendSelectLabel" type="Label" parent="LLMBackendSelect"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 320
+offset_bottom = 44
+text = "LLM后端"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SaveSettingsButton" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 140
+offset_top = 340
+offset_right = 300
+offset_bottom = 384
+
+[node name="SaveSettingsLabel" type="Label" parent="SaveSettingsButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 160
+offset_bottom = 44
+text = "保存"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseSettingsBtn" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 320
+offset_top = 340
+offset_right = 420
+offset_bottom = 384
+
+[node name="CloseSettingsLabel" type="Label" parent="CloseSettingsBtn"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 100
+offset_bottom = 44
+text = "关闭"
+horizontal_alignment = 1
+vertical_alignment = 1
+

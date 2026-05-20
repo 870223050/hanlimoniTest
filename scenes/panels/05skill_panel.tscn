@@ -1,0 +1,204 @@
+[gd_scene load_steps=2 format=3 uid="uid://05skill_panel"]
+
+[ext_resource type="Script" path="res://ui/05skill_panel.gd" id="1_script"]
+
+[node name="SkillPanel" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+
+[node name="Overlay" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.0, 0.0, 0.0, 0.5)
+
+
+[node name="PanelFrame" type="Control" parent="."]
+layout_mode = 0
+offset_left = 80
+offset_top = 40
+offset_right = 880
+offset_bottom = 600
+
+
+[node name="TitleBg" type="TextureRect" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 800
+offset_bottom = 40
+
+
+[node name="TitleLabel" type="Label" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 12
+offset_top = 8
+offset_right = 200
+offset_bottom = 32
+text = "功法"
+
+
+[node name="CloseButton" type="TextureButton" parent="PanelFrame"]
+layout_mode = 0
+
+offset_left = 760
+offset_top = 4
+offset_right = 792
+offset_bottom = 36
+
+[node name="CloseLabel" type="Label" parent="CloseButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 32
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Content" type="Control" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 0
+offset_top = 44
+offset_right = 800
+offset_bottom = 560
+
+
+[node name="FilterCombat" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 4
+offset_top = 0
+offset_right = 120
+offset_bottom = 32
+
+[node name="FilterCombatLabel" type="Label" parent="FilterCombat"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 116
+offset_bottom = 32
+text = "战斗"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FilterPassive" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 128
+offset_top = 0
+offset_right = 244
+offset_bottom = 32
+
+[node name="FilterPassiveLabel" type="Label" parent="FilterPassive"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 116
+offset_bottom = 32
+text = "被动"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FilterMain" type="TextureButton" parent="Content"]
+layout_mode = 0
+
+offset_left = 252
+offset_top = 0
+offset_right = 368
+offset_bottom = 32
+
+[node name="FilterMainLabel" type="Label" parent="FilterMain"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 116
+offset_bottom = 32
+text = "主修"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TechniqueList" type="Control" parent="Content"]
+layout_mode = 0
+offset_left = 4
+offset_top = 40
+offset_right = 300
+offset_bottom = 516
+
+
+[node name="DetailArea" type="Control" parent="Content"]
+layout_mode = 0
+offset_left = 312
+offset_top = 40
+offset_right = 796
+offset_bottom = 516
+
+
+[node name="TechNameLabel" type="Label" parent="Content/DetailArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 484
+offset_bottom = 28
+
+
+[node name="TechGradeLabel" type="Label" parent="Content/DetailArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 36
+offset_right = 200
+offset_bottom = 58
+
+
+[node name="TechLevelLabel" type="Label" parent="Content/DetailArea"]
+layout_mode = 0
+offset_left = 220
+offset_top = 36
+offset_right = 484
+offset_bottom = 58
+
+
+[node name="TechDescLabel" type="Label" parent="Content/DetailArea"]
+layout_mode = 0
+offset_left = 0
+offset_top = 72
+offset_right = 484
+offset_bottom = 200
+
+
+[node name="CultivateButton" type="TextureButton" parent="Content/DetailArea"]
+layout_mode = 0
+
+offset_left = 100
+offset_top = 220
+offset_right = 260
+offset_bottom = 264
+
+[node name="CultivateLabel" type="Label" parent="CultivateButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 160
+offset_bottom = 44
+text = "修炼"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ForgetButton" type="TextureButton" parent="Content/DetailArea"]
+layout_mode = 0
+
+offset_left = 280
+offset_top = 220
+offset_right = 440
+offset_bottom = 264
+
+[node name="ForgetLabel" type="Label" parent="ForgetButton"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 160
+offset_bottom = 44
+text = "遗忘"
+horizontal_alignment = 1
+vertical_alignment = 1
+

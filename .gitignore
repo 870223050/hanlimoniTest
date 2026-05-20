@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# 临时工具脚本
+fix_tscn.py
+verify_tscn.py
+
+# Windows 保留文件
+nul
+
+# 本地存档
+/save/

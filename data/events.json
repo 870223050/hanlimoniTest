@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "events": [
+    {
+      "event_type": "explore",
+      "choices": {
+        "choice_1": {"effect": "add_spirit_stones", "amount": 500, "narration": "你收获了一些灵石！（+500 灵石）"},
+        "choice_2": {"effect": "add_cultivation_exp", "amount": 30, "narration": "你在探索中有所感悟，修为略有精进。（修为 +30）"},
+        "choice_3": {"effect": "trigger_battle", "enemy_id": "forest_spirit", "narration": "你遇到了一只妖兽，战斗即将开始！"}
+      }
+    },
+    {
+      "event_type": "find_herb",
+      "choices": {
+        "choice_1": {"effect": "add_item", "item_id": "spirit_grass", "quantity": 3, "narration": "你小心翼翼地采下了灵草，收获不错。"},
+        "choice_2": {"effect": "nothing", "narration": "你觉得此地不宜久留，转身离开了。"}
+      }
+    },
+    {
+      "event_type": "npc_encounter",
+      "choices": {
+        "choice_1": {"effect": "add_relation", "npc_id": "old_monk", "amount": 10, "narration": "老修士感激地握住你的手。"},
+        "choice_2": {"effect": "add_relation", "npc_id": "old_monk", "amount": 5, "narration": "你与老修士交谈片刻，得知了一些附近的信息。"},
+        "choice_3": {"effect": "add_spirit_stones", "amount": 200, "relation_penalty": -30, "narration": "你做了不义之事……"}
+      }
+    }
+  ],
+  "mock_narrations": [
+    {
+      "narration_text": "你沿着青云山的古道缓步前行，两旁古木参天，灵气氤氲。忽然，前方灌木丛中传来窸窣声响，一道青光闪过——竟是一株通体碧绿的「翠云草」！此草乃是炼制筑基丹的主材之一，极为珍贵。然而，草丛旁隐约可见一条翠绿色的蛇影盘踞...",
+      "choices": [
+        {"id": "choice_1", "text": "出手采药，正面迎战绿蛇", "risk_hint": "risky"},
+        {"id": "choice_2", "text": "施展隐匿术，悄悄采摘", "risk_hint": "safe"},
+        {"id": "choice_3", "text": "放弃翠云草，继续前行", "risk_hint": "safe"}
+      ],
+      "event_type": "explore"
+    },
+    {
+      "narration_text": "山风吹过，带来一阵淡淡的药香。你循着气味来到一处山崖之下，发现这里竟然生长着一小片野生灵药。虽不是什么稀世奇珍，但对于炼气期的修士来说，也是不错的收获。然而，你隐约感觉到附近有其他修士的气息...",
+      "choices": [
+        {"id": "choice_1", "text": "快速采集灵药后离开", "risk_hint": "risky"},
+        {"id": "choice_2", "text": "上前与对方打招呼", "risk_hint": "unknown"},
+        {"id": "choice_3", "text": "躲藏起来观察情况", "risk_hint": "safe"}
+      ],
+      "event_type": "explore"
+    },
+    {
+      "narration_text": "你在山道上遇到一位负伤的老修士，他背靠古树，面色苍白。看见你走近，他勉强抬起手招呼道：「小友...能否...助老夫一臂之力？」看来他是在与妖兽战斗后受了重伤。",
+      "choices": [
+        {"id": "choice_1", "text": "上前救治老修士", "risk_hint": "safe"},
+        {"id": "choice_2", "text": "询问发生了什么事", "risk_hint": "safe"},
+        {"id": "choice_3", "text": "趁其虚弱，夺取他的储物袋", "risk_hint": "dangerous"}
+      ],
+      "event_type": "npc_encounter"
+    },
+    {
+      "narration_text": "你来到一处幽静的山谷，此地灵气浓郁远超外界。谷中有一方小潭，潭水清澈见底，隐约可见水底有微光闪动。传闻青云山藏有前辈修士的洞府遗迹，莫非就在此处？",
+      "choices": [
+        {"id": "choice_1", "text": "潜入潭底探查", "risk_hint": "risky"},
+        {"id": "choice_2", "text": "在岸边打坐修炼", "risk_hint": "safe"},
+        {"id": "choice_3", "text": "标记此地，日后再来", "risk_hint": "safe"}
+      ],
+      "event_type": "explore"
+    },
+    {
+      "narration_text": "一只浑身雪白的灵狐从林中窜出，口中衔着一枚晶莹剔透的灵石，它在你面前停下，放下灵石，眼巴巴地望着你，似乎在等待什么。",
+      "choices": [
+        {"id": "choice_1", "text": "收下灵石，给灵狐一些食物", "risk_hint": "safe"},
+        {"id": "choice_2", "text": "只收灵石，驱赶灵狐", "risk_hint": "risky"},
+        {"id": "choice_3", "text": "跟随灵狐，看它要去哪里", "risk_hint": "unknown"}
+      ],
+      "event_type": "explore"
+    }
+  ]
+}

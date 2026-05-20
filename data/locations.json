@@ -1,0 +1,40 @@
+{
+  "regions": [
+    {
+      "region_id": "qingyun_mountains",
+      "region_name": "青云山脉",
+      "description": "横跨玄黄界东部的庞大山脉，灵气充沛，是正道七宗之一「青云宗」的所在地。",
+      "spiritual_density": 1.3,
+      "locations": [
+        {
+          "location_id": "qingyun_main",
+          "location_name": "青云山·主峰",
+          "description": "青云宗的主峰，宗门大殿和藏经阁坐落于此。山巅常有云雾缭绕，灵气浓郁。",
+          "spiritual_density": 1.5,
+          "type": "faction_headquarters"
+        },
+        {
+          "location_id": "qingyun_forest",
+          "location_name": "青云山·外围山林",
+          "description": "主峰外围的广袤山林，常有低阶妖兽出没，也是宗门弟子采集灵药的场所。",
+          "spiritual_density": 1.0,
+          "type": "wilderness"
+        },
+        {
+          "location_id": "qingyun_valley",
+          "location_name": "青云山·幽谷",
+          "description": "一处灵气异常浓郁的山谷，传说有上古修士的洞府遗迹。",
+          "spiritual_density": 2.0,
+          "type": "secret_realm"
+        },
+        {
+          "location_id": "qingyun_market",
+          "location_name": "青云山·坊市",
+          "description": "山中修士自发形成的交易集市，可以买卖丹药、材料和装备。",
+          "spiritual_density": 1.0,
+          "type": "market"
+        }
+      ]
+    }
+  ]
+}

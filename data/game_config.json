@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0",
+  "cultivation": {
+    "base_speed": 10.0,
+    "stage_breakthrough_rate": 0.9,
+    "realm_breakthrough_base_rate": 0.5,
+    "stage_exp_multiplier": 1.5,
+    "exp_loss_on_fail": 0.3,
+    "spirit_power_multiplier": 1.3
+  },
+  "combat": {
+    "base_damage_multiplier": 10.0,
+    "defense_formula_divisor": 50.0,
+    "critical_multiplier": 1.5,
+    "random_variance_min": 0.9,
+    "random_variance_max": 1.1,
+    "element_advantage_multiplier": 1.3,
+    "element_disadvantage_multiplier": 0.7
+  },
+  "spiritual_roots": {
+    "single_root": {"multiplier": 2.0, "breakthrough_bonus": 0.20},
+    "dual_root": {"multiplier": 1.3, "breakthrough_bonus": 0.05},
+    "triple_root": {"multiplier": 1.0, "breakthrough_bonus": 0.0},
+    "quad_root": {"multiplier": 0.7, "breakthrough_bonus": -0.05},
+    "penta_root": {"multiplier": 0.4, "breakthrough_bonus": -0.10}
+  },
+  "lifespan": {
+    "refining_qi": 150,
+    "foundation": 250,
+    "golden_core": 500,
+    "nascent_soul": 1000,
+    "spirit_severing": 2000
+  },
+  "spiritual_density": {
+    "normal": 1.0,
+    "faction": 1.3,
+    "cave": 2.0,
+    "secret_realm": 3.0
+  },
+  "time": {
+    "hours_per_day": 12,
+    "days_per_month": 30,
+    "months_per_year": 12,
+    "hour_names": ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+  }
+}

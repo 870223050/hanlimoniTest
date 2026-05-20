@@ -1,0 +1,253 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcio7r8qgoap4"]
+
+[ext_resource type="Script" uid="uid://624y45rb3i71" path="res://ui/04character_panel.gd" id="1_script"]
+
+[node name="CharacterPanel" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="Overlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.5)
+
+[node name="PanelFrame" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 880.0
+offset_bottom = 600.0
+
+[node name="TitleBg" type="TextureRect" parent="PanelFrame"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 32.0
+text = "人物"
+
+[node name="CloseButton" type="TextureButton" parent="PanelFrame"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 4.0
+offset_right = 792.0
+offset_bottom = 36.0
+
+[node name="CloseLabel" type="Label" parent="PanelFrame/CloseButton"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Content" type="Control" parent="PanelFrame"]
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 800.0
+offset_bottom = 560.0
+
+[node name="TabBasic" type="TextureButton" parent="PanelFrame/Content"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 100.0
+offset_bottom = 32.0
+
+[node name="TabBasicLabel" type="Label" parent="PanelFrame/Content/TabBasic"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 32.0
+text = "基础"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabRealm" type="TextureButton" parent="PanelFrame/Content"]
+layout_mode = 0
+offset_left = 108.0
+offset_right = 212.0
+offset_bottom = 32.0
+
+[node name="TabRealmLabel" type="Label" parent="PanelFrame/Content/TabRealm"]
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 32.0
+text = "境界"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabEquip" type="TextureButton" parent="PanelFrame/Content"]
+layout_mode = 0
+offset_left = 220.0
+offset_right = 316.0
+offset_bottom = 32.0
+
+[node name="TabEquipLabel" type="Label" parent="PanelFrame/Content/TabEquip"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 32.0
+text = "装备"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabArts" type="TextureButton" parent="PanelFrame/Content"]
+layout_mode = 0
+offset_left = 324.0
+offset_right = 428.0
+offset_bottom = 32.0
+
+[node name="TabArtsLabel" type="Label" parent="PanelFrame/Content/TabArts"]
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 32.0
+text = "功法"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabBasicContent" type="Control" parent="PanelFrame/Content"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 792.0
+offset_bottom = 516.0
+
+[node name="NameGenderLabel" type="Label" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 24.0
+
+[node name="AgeLabel" type="Label" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 500.0
+offset_bottom = 24.0
+
+[node name="AttrRectBone" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 784.0
+offset_bottom = 64.0
+
+[node name="AttrRectComp" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_top = 72.0
+offset_right = 784.0
+offset_bottom = 96.0
+
+[node name="AttrRectSense" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_top = 104.0
+offset_right = 784.0
+offset_bottom = 128.0
+
+[node name="AttrRectFortune" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_top = 136.0
+offset_right = 784.0
+offset_bottom = 160.0
+
+[node name="AttrRectCharisma" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_top = 168.0
+offset_right = 784.0
+offset_bottom = 192.0
+
+[node name="RootDisplay" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_top = 210.0
+offset_right = 300.0
+offset_bottom = 250.0
+
+[node name="HpBar" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_top = 270.0
+offset_right = 380.0
+offset_bottom = 296.0
+
+[node name="SpBar" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 270.0
+offset_right = 784.0
+offset_bottom = 296.0
+
+[node name="PoisonBar" type="TextureRect" parent="PanelFrame/Content/TabBasicContent"]
+layout_mode = 0
+offset_top = 310.0
+offset_right = 380.0
+offset_bottom = 334.0
+
+[node name="TabRealmContent" type="Control" parent="PanelFrame/Content"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 792.0
+offset_bottom = 516.0
+
+[node name="RealmStageLabel" type="Label" parent="PanelFrame/Content/TabRealmContent"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 32.0
+
+[node name="CultivationProgressBar" type="TextureRect" parent="PanelFrame/Content/TabRealmContent"]
+layout_mode = 0
+offset_top = 44.0
+offset_right = 784.0
+offset_bottom = 68.0
+
+[node name="BreakConditionLabel" type="Label" parent="PanelFrame/Content/TabRealmContent"]
+layout_mode = 0
+offset_top = 84.0
+offset_right = 784.0
+offset_bottom = 160.0
+
+[node name="AttemptBreakButton" type="TextureButton" parent="PanelFrame/Content/TabRealmContent"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 180.0
+offset_right = 540.0
+offset_bottom = 228.0
+
+[node name="AttemptBreakLabel" type="Label" parent="PanelFrame/Content/TabRealmContent/AttemptBreakButton"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 48.0
+text = "尝试突破"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabEquipContent" type="Control" parent="PanelFrame/Content"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 792.0
+offset_bottom = 516.0
+
+[node name="EquipSlotGrid" type="TextureRect" parent="PanelFrame/Content/TabEquipContent"]
+layout_mode = 0
+offset_right = 784.0
+offset_bottom = 400.0
+
+[node name="TabArtsContent" type="Control" parent="PanelFrame/Content"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 792.0
+offset_bottom = 516.0
+
+[node name="ArtsSlotGrid" type="TextureRect" parent="PanelFrame/Content/TabArtsContent"]
+layout_mode = 0
+offset_right = 784.0
+offset_bottom = 400.0

@@ -1,0 +1,61 @@
+{
+  "techniques": [
+    {
+      "tech_id": "basic_cultivation",
+      "tech_name": "吐纳术",
+      "tech_type": 0,
+      "grade": 0,
+      "element": 0,
+      "required_realm": "炼气期",
+      "max_level": 3,
+      "description": "最基础的修炼功法，引导天地灵气入体。",
+      "effects": [{"type": "cultivation_speed", "amount": 0.1}]
+    },
+    {
+      "tech_id": "basic_sword_art",
+      "tech_name": "基础剑诀",
+      "tech_type": 1,
+      "grade": 0,
+      "element": 0,
+      "required_realm": "炼气期",
+      "max_level": 3,
+      "power": 15.0,
+      "spirit_power_cost": 5,
+      "cooldown": 0,
+      "description": "基础的剑术神通，消耗少量灵力挥出一道剑气。"
+    },
+    {
+      "tech_id": "fire_dragon_art",
+      "tech_name": "火龙术",
+      "tech_type": 1,
+      "grade": 1,
+      "element": 3,
+      "required_realm": "筑基期",
+      "max_level": 5,
+      "power": 40.0,
+      "spirit_power_cost": 20,
+      "cooldown": 2,
+      "description": "凝聚火属性灵力，化作火龙吞噬敌人。"
+    },
+    {
+      "tech_id": "iron_body_passive",
+      "tech_name": "金钟罩",
+      "tech_type": 2,
+      "grade": 1,
+      "element": 0,
+      "required_realm": "炼气期",
+      "description": "运转灵力护体，被动提升防御力。",
+      "effects": [{"type": "defense_bonus", "amount": 10}]
+    },
+    {
+      "tech_id": "clear_mind_passive",
+      "tech_name": "心如止水",
+      "tech_type": 2,
+      "grade": 2,
+      "element": 2,
+      "required_realm": "筑基期",
+      "description": "心境通明，修炼时事半功倍。",
+      "effects": [{"type": "cultivation_speed", "amount": 0.2}]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "item_id": "spirit_grass",
+      "item_name": "灵草",
+      "item_type": 1,
+      "grade": 1,
+      "description": "常见的低阶灵草，蕴含微弱灵气，可用于炼制基础丹药。",
+      "value": 10,
+      "quantity": 1,
+      "is_tradable": true
+    },
+    {
+      "item_id": "heal_pill_low",
+      "item_name": "回春丹",
+      "item_type": 0,
+      "grade": 1,
+      "description": "基础疗伤丹药，服用后恢复 50 点生命值。",
+      "value": 50,
+      "quantity": 1,
+      "is_tradable": true,
+      "effects": [{"type": "heal", "amount": 50}]
+    },
+    {
+      "item_id": "spirit_pill_low",
+      "item_name": "聚灵丹",
+      "item_type": 0,
+      "grade": 2,
+      "description": "辅助修炼的丹药，服用后短时间内提升修炼速度 20%。",
+      "value": 100,
+      "quantity": 1,
+      "is_tradable": true,
+      "effects": [{"type": "cultivation_boost", "amount": 0.2, "duration": 6}]
+    },
+    {
+      "item_id": "iron_sword",
+      "item_name": "铁剑",
+      "item_type": 2,
+      "grade": 1,
+      "description": "一把普通的铁制长剑，修士的基础武器。",
+      "value": 30,
+      "quantity": 1,
+      "is_tradable": true,
+      "equip_slot": "weapon",
+      "effects": [{"type": "attack_bonus", "amount": 5}]
+    },
+    {
+      "item_id": "cloth_armor",
+      "item_name": "布衣",
+      "item_type": 2,
+      "grade": 1,
+      "description": "粗布缝制的道袍，聊胜于无的防护。",
+      "value": 15,
+      "quantity": 1,
+      "is_tradable": true,
+      "equip_slot": "armor",
+      "effects": [{"type": "defense_bonus", "amount": 3}]
+    },
+    {
+      "item_id": "basic_sword_manual",
+      "item_name": "基础剑诀",
+      "item_type": 3,
+      "grade": 1,
+      "description": "记录基础剑法的功法书，炼气期修士可修习。",
+      "value": 200,
+      "quantity": 1,
+      "is_tradable": true,
+      "tech_id": "basic_sword_art"
+    },
+    {
+      "item_id": "foundation_pill",
+      "item_name": "筑基丹",
+      "item_type": 0,
+      "grade": 4,
+      "description": "突破至筑基期的关键丹药，极为珍贵。",
+      "value": 5000,
+      "quantity": 1,
+      "is_tradable": true,
+      "effects": [{"type": "breakthrough_boost", "amount": 0.3}]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3xk8q4r3e26"]
+
+[ext_resource type="Script" uid="uid://1ab20mlgxyc6" path="res://ui/01main_menu.gd" id="1_script"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="BackgroundRect" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TitleLogo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 80.0
+offset_right = 660.0
+offset_bottom = 200.0
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 210.0
+offset_right = 660.0
+offset_bottom = 250.0
+text = "深度修仙模拟"
+horizontal_alignment = 1
+
+[node name="NewGameButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 300.0
+offset_right = 580.0
+offset_bottom = 348.0
+
+[node name="NewGameLabel" type="Label" parent="NewGameButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 48.0
+text = "新游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadGameButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 340.0
+offset_right = 593.0
+offset_bottom = 388.0
+
+[node name="LoadGameLabel" type="Label" parent="LoadGameButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 48.0
+text = "继续游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 420.0
+offset_right = 580.0
+offset_bottom = 468.0
+
+[node name="SettingsLabel" type="Label" parent="SettingsButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 48.0
+text = "设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GlossaryButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 480.0
+offset_right = 580.0
+offset_bottom = 528.0
+
+[node name="GlossaryLabel" type="Label" parent="GlossaryButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 48.0
+text = "图鉴"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 540.0
+offset_right = 580.0
+offset_bottom = 588.0
+
+[node name="QuitLabel" type="Label" parent="QuitButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 48.0
+text = "退出游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VersionLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 548.0
+offset_right = 950.0
+offset_bottom = 572.0
+text = "v0.1.0"
+horizontal_alignment = 2
