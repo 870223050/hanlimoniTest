@@ -23,6 +23,10 @@ LLMService="*res://core/global/llm_service.gd"
 BattleManager="*res://core/global/battle_manager.gd"
 UIManager="*res://core/global/ui_manager.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

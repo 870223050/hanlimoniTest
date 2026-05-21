@@ -1,110 +1,90 @@
-[gd_scene load_steps=2 format=3 uid="uid://17game_over"]
+[gd_scene load_steps=2 format=3 uid="uid://cg5ixooigllug"]
 
-[ext_resource type="Script" path="res://ui/17game_over.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://cxjq4fvva811e" path="res://ui/17game_over.gd" id="1_script"]
 
 [node name="GameOver" type="Control"]
-layout_mode = 0
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_script")
-
 
 [node name="BackgroundRect" type="TextureRect" parent="."]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-
 [node name="EndingTitleLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 300
-offset_top = 80
-offset_right = 660
-offset_bottom = 140
+offset_left = 300.0
+offset_top = 80.0
+offset_right = 660.0
+offset_bottom = 140.0
 horizontal_alignment = 1
-
 
 [node name="SummaryLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 160
-offset_top = 170
-offset_right = 800
-offset_bottom = 320
-
+offset_left = 160.0
+offset_top = 170.0
+offset_right = 800.0
+offset_bottom = 320.0
 
 [node name="StatsArea" type="Control" parent="."]
-layout_mode = 0
-offset_left = 280
-offset_top = 340
-offset_right = 680
-offset_bottom = 470
-
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 340.0
+offset_right = 680.0
+offset_bottom = 470.0
 
 [node name="CultivationYearsLabel" type="Label" parent="StatsArea"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 400
-offset_bottom = 26
-
+offset_right = 400.0
+offset_bottom = 26.0
 
 [node name="FinalRealmLabel" type="Label" parent="StatsArea"]
 layout_mode = 0
-offset_left = 0
-offset_top = 32
-offset_right = 400
-offset_bottom = 58
-
+offset_top = 32.0
+offset_right = 400.0
+offset_bottom = 58.0
 
 [node name="KillCountLabel" type="Label" parent="StatsArea"]
 layout_mode = 0
-offset_left = 0
-offset_top = 64
-offset_right = 400
-offset_bottom = 90
-
+offset_top = 64.0
+offset_right = 400.0
+offset_bottom = 90.0
 
 [node name="AchievementLabel" type="Label" parent="StatsArea"]
 layout_mode = 0
-offset_left = 0
-offset_top = 96
-offset_right = 400
-offset_bottom = 130
-
+offset_top = 96.0
+offset_right = 400.0
+offset_bottom = 130.0
 
 [node name="RebirthButton" type="TextureButton" parent="."]
 layout_mode = 0
-
-offset_left = 300
-offset_top = 500
-offset_right = 460
-offset_bottom = 548
+offset_left = 300.0
+offset_top = 500.0
+offset_right = 460.0
+offset_bottom = 548.0
 
 [node name="RebirthLabel" type="Label" parent="RebirthButton"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 160
-offset_bottom = 48
+offset_right = 160.0
+offset_bottom = 48.0
 text = "轮回转世"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MainMenuButton" type="TextureButton" parent="."]
 layout_mode = 0
-
-offset_left = 500
-offset_top = 500
-offset_right = 660
-offset_bottom = 548
+offset_left = 500.0
+offset_top = 500.0
+offset_right = 660.0
+offset_bottom = 548.0
 
 [node name="MainMenuLabel" type="Label" parent="MainMenuButton"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 160
-offset_bottom = 48
+offset_right = 160.0
+offset_bottom = 48.0
 text = "返回标题"
 horizontal_alignment = 1
 vertical_alignment = 1
-

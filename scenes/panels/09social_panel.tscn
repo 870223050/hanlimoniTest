@@ -1,204 +1,148 @@
-[gd_scene load_steps=2 format=3 uid="uid://09social_panel"]
+[gd_scene load_steps=2 format=3 uid="uid://ceqkpylmf8gb1"]
 
-[ext_resource type="Script" path="res://ui/09social_panel.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://drtfsnf3oxqig" path="res://ui/09social_panel.gd" id="1_script"]
 
 [node name="SocialPanel" type="CanvasLayer"]
 script = ExtResource("1_script")
 
-
 [node name="Overlay" type="ColorRect" parent="."]
-layout_mode = 0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.0, 0.0, 0.0, 0.5)
-
+color = Color(0, 0, 0, 0.5)
 
 [node name="PanelFrame" type="Control" parent="."]
-layout_mode = 0
-offset_left = 80
-offset_top = 40
-offset_right = 880
-offset_bottom = 600
-
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 880.0
+offset_bottom = 600.0
 
 [node name="TitleBg" type="TextureRect" parent="PanelFrame"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 800
-offset_bottom = 40
-
+offset_right = 800.0
+offset_bottom = 40.0
 
 [node name="TitleLabel" type="Label" parent="PanelFrame"]
 layout_mode = 0
-offset_left = 12
-offset_top = 8
-offset_right = 200
-offset_bottom = 32
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 32.0
 text = "社交"
-
 
 [node name="CloseButton" type="TextureButton" parent="PanelFrame"]
 layout_mode = 0
+offset_left = 760.0
+offset_top = 4.0
+offset_right = 792.0
+offset_bottom = 36.0
 
-offset_left = 760
-offset_top = 4
-offset_right = 792
-offset_bottom = 36
+[node name="Content" type="Control" parent="PanelFrame"]
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 800.0
+offset_bottom = 560.0
 
-[node name="CloseLabel" type="Label" parent="CloseButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 32
-offset_bottom = 32
+[node name="CloseButton#CloseLabel" type="Label" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Content" type="Control" parent="PanelFrame"]
-layout_mode = 0
-offset_left = 0
-offset_top = 44
-offset_right = 800
-offset_bottom = 560
+[node name="Content#NPCList" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 280.0
+offset_bottom = 516.0
 
+[node name="Content#NPCDetail" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 292.0
+offset_right = 796.0
+offset_bottom = 516.0
 
-[node name="NPCList" type="Control" parent="Content"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 280
-offset_bottom = 516
+[node name="Content_NPCDetail#NPCNameLabel" type="Label" parent="."]
+offset_right = 400.0
+offset_bottom = 30.0
 
+[node name="Content_NPCDetail#NPCRealmLabel" type="Label" parent="."]
+offset_top = 36.0
+offset_right = 300.0
+offset_bottom = 58.0
 
-[node name="NPCDetail" type="Control" parent="Content"]
-layout_mode = 0
-offset_left = 292
-offset_top = 0
-offset_right = 796
-offset_bottom = 516
+[node name="Content_NPCDetail#RelationLabel" type="Label" parent="."]
+offset_top = 66.0
+offset_right = 300.0
+offset_bottom = 88.0
 
+[node name="Content_NPCDetail#FavorBar" type="TextureRect" parent="."]
+offset_top = 98.0
+offset_right = 504.0
+offset_bottom = 124.0
 
-[node name="NPCNameLabel" type="Label" parent="Content/NPCDetail"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 400
-offset_bottom = 30
+[node name="Content_NPCDetail#TalkButton" type="TextureButton" parent="."]
+offset_top = 144.0
+offset_right = 140.0
+offset_bottom = 188.0
 
-
-[node name="NPCRealmLabel" type="Label" parent="Content/NPCDetail"]
-layout_mode = 0
-offset_left = 0
-offset_top = 36
-offset_right = 300
-offset_bottom = 58
-
-
-[node name="RelationLabel" type="Label" parent="Content/NPCDetail"]
-layout_mode = 0
-offset_left = 0
-offset_top = 66
-offset_right = 300
-offset_bottom = 88
-
-
-[node name="FavorBar" type="TextureRect" parent="Content/NPCDetail"]
-layout_mode = 0
-offset_left = 0
-offset_top = 98
-offset_right = 504
-offset_bottom = 124
-
-
-[node name="TalkButton" type="TextureButton" parent="Content/NPCDetail"]
-layout_mode = 0
-
-offset_left = 0
-offset_top = 144
-offset_right = 140
-offset_bottom = 188
-
-[node name="TalkLabel" type="Label" parent="TalkButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 44
+[node name="TalkButton#TalkLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 44.0
 text = "交谈"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DiscussButton" type="TextureButton" parent="Content/NPCDetail"]
-layout_mode = 0
+[node name="Content_NPCDetail#DiscussButton" type="TextureButton" parent="."]
+offset_left = 152.0
+offset_top = 144.0
+offset_right = 292.0
+offset_bottom = 188.0
 
-offset_left = 152
-offset_top = 144
-offset_right = 292
-offset_bottom = 188
-
-[node name="DiscussLabel" type="Label" parent="DiscussButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 44
+[node name="DiscussButton#DiscussLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 44.0
 text = "论道"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SparButton" type="TextureButton" parent="Content/NPCDetail"]
-layout_mode = 0
+[node name="Content_NPCDetail#SparButton" type="TextureButton" parent="."]
+offset_left = 304.0
+offset_top = 144.0
+offset_right = 444.0
+offset_bottom = 188.0
 
-offset_left = 304
-offset_top = 144
-offset_right = 444
-offset_bottom = 188
-
-[node name="SparLabel" type="Label" parent="SparButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 44
+[node name="SparButton#SparLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 44.0
 text = "切磋"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GiftButton" type="TextureButton" parent="Content/NPCDetail"]
-layout_mode = 0
+[node name="Content_NPCDetail#GiftButton" type="TextureButton" parent="."]
+offset_top = 204.0
+offset_right = 140.0
+offset_bottom = 248.0
 
-offset_left = 0
-offset_top = 204
-offset_right = 140
-offset_bottom = 248
-
-[node name="GiftLabel" type="Label" parent="GiftButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 44
+[node name="GiftButton#GiftLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 44.0
 text = "赠礼"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TradeButton" type="TextureButton" parent="Content/NPCDetail"]
-layout_mode = 0
+[node name="Content_NPCDetail#TradeButton" type="TextureButton" parent="."]
+offset_left = 152.0
+offset_top = 204.0
+offset_right = 292.0
+offset_bottom = 248.0
 
-offset_left = 152
-offset_top = 204
-offset_right = 292
-offset_bottom = 248
-
-[node name="TradeLabel" type="Label" parent="TradeButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 44
+[node name="TradeButton#TradeLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 44.0
 text = "交易"
 horizontal_alignment = 1
 vertical_alignment = 1
-

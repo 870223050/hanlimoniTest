@@ -12,8 +12,8 @@
 |------|------|
 | 引擎 | Godot 4.4（GL Compatibility） |
 | 语言 | GDScript（中文注释） |
-| LLM 后端 | Mock / Ollama / OpenAI |
-| 数据格式 | JSON |
+| LLM 后端 | Mock / Ollama / OpenAI / DeepSeek |
+| 数据格式 | JSON（`to_dict`/`from_dict` 统一序列化） |
 | 编码 | UTF-8 / LF |
 
 ---
@@ -48,6 +48,9 @@ hanlimoni/
 │           ├── auction_system.gd
 │           └── glossary_system.gd
 ├── ui/                      # UI 脚本（20 个）
+├── test/                    # 测试场景
+│   ├── test.gd              # 探索→事件流集成测试
+│   └── test.tscn            # 测试 UI（ExploreButton + EventListContainer）
 ├── scenes/                  # TSCN 场景（20 个）
 │   ├── 01main_menu.tscn     # 主菜单
 │   ├── 02char_create.tscn   # 角色创建（4 步向导）
@@ -130,6 +133,40 @@ hanlimoni/
 3. 用 Godot 打开 `project.godot`
 4. 按 F5 运行（默认 Mock 后端，无需配置 LLM）
 
-### LLM 后端切换
+### LlmService 事件流
 
-编辑 `data/llm_config.json`，修改 `backend` 为 `mock` / `ollama` / `openai`，并填写对应 API 配置。
+```
+ExploreButton (点击)
+  → EventManager.trigger_exploration()
+    → LLMService.request_event(context, callback)
+      → [Mock/Ollama/OpenAI/DeepSeek] 返回 JSON
+    → event_display 信号 (narration + choices)
+  → UI 解析生成选择按钮
+    → 玩家选择
+  → EventManager.execute_choice(choice_id)
+    → 数据驱动 effects 链执行
+  → event_result 信号 (结果叙事)
+```
+
+### LLM 后端配置
+
+编辑 `core/global/llm_service.gd` 修改 `provider` 和对应配置：
+
+```gdscript
+# Mock 模式（默认，无需网络）
+provider = Provider.MOCK
+
+# Ollama 本地模式
+provider = Provider.OLLAMA
+ollama_url = "http://localhost:11434"
+ollama_model = "qwen2.5:7b"
+
+# OpenAI 兼容模式（DeepSeek 等）
+provider = Provider.OPENAI
+openai_url = "https://api.deepseek.com"  # 仅 base URL
+openai_key = "sk-your-key"
+openai_model = "deepseek-chat"
+timeout = 120.0  # LLM 请求超时（秒）
+```
+
+> **注意**: `openai_url` 只需填写 base URL，代码会自动追加 `/chat/completions`。HTTP 请求超时默认 120 秒，可在 `llm_service.gd` 中调整。

@@ -1,222 +1,163 @@
-[gd_scene load_steps=2 format=3 uid="uid://07map_panel"]
+[gd_scene load_steps=2 format=3 uid="uid://bmv53wndxgvkb"]
 
-[ext_resource type="Script" path="res://ui/07map_panel.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://cydyohg2w80bu" path="res://ui/07map_panel.gd" id="1_script"]
 
 [node name="MapPanel" type="CanvasLayer"]
 script = ExtResource("1_script")
 
-
 [node name="Overlay" type="ColorRect" parent="."]
-layout_mode = 0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.0, 0.0, 0.0, 0.5)
-
+color = Color(0, 0, 0, 0.5)
 
 [node name="PanelFrame" type="Control" parent="."]
-layout_mode = 0
-offset_left = 80
-offset_top = 40
-offset_right = 880
-offset_bottom = 600
-
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 880.0
+offset_bottom = 600.0
 
 [node name="TitleBg" type="TextureRect" parent="PanelFrame"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 800
-offset_bottom = 40
-
+offset_right = 800.0
+offset_bottom = 40.0
 
 [node name="TitleLabel" type="Label" parent="PanelFrame"]
 layout_mode = 0
-offset_left = 12
-offset_top = 8
-offset_right = 200
-offset_bottom = 32
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 32.0
 text = "地图"
-
 
 [node name="CloseButton" type="TextureButton" parent="PanelFrame"]
 layout_mode = 0
+offset_left = 760.0
+offset_top = 4.0
+offset_right = 792.0
+offset_bottom = 36.0
 
-offset_left = 760
-offset_top = 4
-offset_right = 792
-offset_bottom = 36
+[node name="Content" type="Control" parent="PanelFrame"]
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 800.0
+offset_bottom = 560.0
 
-[node name="CloseLabel" type="Label" parent="CloseButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 32
-offset_bottom = 32
+[node name="CloseButton#CloseLabel" type="Label" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Content" type="Control" parent="PanelFrame"]
-layout_mode = 0
-offset_left = 0
-offset_top = 44
-offset_right = 800
-offset_bottom = 560
+[node name="Content#MapArea" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 520.0
+offset_bottom = 440.0
 
+[node name="Content_MapArea#WorldMapBg" type="TextureRect" parent="."]
+offset_right = 520.0
+offset_bottom = 440.0
 
-[node name="MapArea" type="Control" parent="Content"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 520
-offset_bottom = 440
+[node name="Content_MapArea#LocationNode1" type="TextureButton" parent="."]
+offset_left = 180.0
+offset_top = 120.0
+offset_right = 260.0
+offset_bottom = 152.0
 
-
-[node name="WorldMapBg" type="TextureRect" parent="Content/MapArea"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 520
-offset_bottom = 440
-
-
-[node name="LocationNode1" type="TextureButton" parent="Content/MapArea"]
-layout_mode = 0
-
-offset_left = 180
-offset_top = 120
-offset_right = 260
-offset_bottom = 152
-
-[node name="LocationNode1Label" type="Label" parent="LocationNode1"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 80
-offset_bottom = 32
+[node name="LocationNode1#LocationNode1Label" type="Label" parent="."]
+offset_right = 80.0
+offset_bottom = 32.0
 text = "青云山"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LocationNode2" type="TextureButton" parent="Content/MapArea"]
-layout_mode = 0
+[node name="Content_MapArea#LocationNode2" type="TextureButton" parent="."]
+offset_left = 40.0
+offset_top = 280.0
+offset_right = 120.0
+offset_bottom = 312.0
 
-offset_left = 40
-offset_top = 280
-offset_right = 120
-offset_bottom = 312
-
-[node name="LocationNode2Label" type="Label" parent="LocationNode2"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 80
-offset_bottom = 32
+[node name="LocationNode2#LocationNode2Label" type="Label" parent="."]
+offset_right = 80.0
+offset_bottom = 32.0
 text = "坊市"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LocationNode3" type="TextureButton" parent="Content/MapArea"]
-layout_mode = 0
+[node name="Content_MapArea#LocationNode3" type="TextureButton" parent="."]
+offset_left = 360.0
+offset_top = 60.0
+offset_right = 440.0
+offset_bottom = 92.0
 
-offset_left = 360
-offset_top = 60
-offset_right = 440
-offset_bottom = 92
-
-[node name="LocationNode3Label" type="Label" parent="LocationNode3"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 80
-offset_bottom = 32
+[node name="LocationNode3#LocationNode3Label" type="Label" parent="."]
+offset_right = 80.0
+offset_bottom = 32.0
 text = "秘境"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayerMarker" type="TextureRect" parent="Content/MapArea"]
-layout_mode = 0
-offset_left = 176
-offset_top = 116
-offset_right = 208
-offset_bottom = 148
+[node name="Content_MapArea#PlayerMarker" type="TextureRect" parent="."]
+offset_left = 176.0
+offset_top = 116.0
+offset_right = 208.0
+offset_bottom = 148.0
 
+[node name="Content#AreaListView" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 530.0
+offset_right = 796.0
+offset_bottom = 440.0
 
-[node name="AreaListView" type="Control" parent="Content"]
-layout_mode = 0
-offset_left = 530
-offset_top = 0
-offset_right = 796
-offset_bottom = 440
+[node name="Content#InfoBar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 450.0
+offset_right = 796.0
+offset_bottom = 516.0
 
+[node name="Content_InfoBar#CurrentLocLabel" type="Label" parent="."]
+offset_left = 4.0
+offset_right = 300.0
+offset_bottom = 24.0
 
-[node name="InfoBar" type="Control" parent="Content"]
-layout_mode = 0
-offset_left = 0
-offset_top = 450
-offset_right = 796
-offset_bottom = 516
+[node name="Content_InfoBar#TravelButton" type="TextureButton" parent="."]
+offset_left = 320.0
+offset_right = 440.0
+offset_bottom = 44.0
 
-
-[node name="CurrentLocLabel" type="Label" parent="Content/InfoBar"]
-layout_mode = 0
-offset_left = 4
-offset_top = 0
-offset_right = 300
-offset_bottom = 24
-
-
-[node name="TravelButton" type="TextureButton" parent="Content/InfoBar"]
-layout_mode = 0
-
-offset_left = 320
-offset_top = 0
-offset_right = 440
-offset_bottom = 44
-
-[node name="TravelLabel" type="Label" parent="TravelButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 120
-offset_bottom = 44
+[node name="TravelButton#TravelLabel" type="Label" parent="."]
+offset_right = 120.0
+offset_bottom = 44.0
 text = "游历四方"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TeleportButton" type="TextureButton" parent="Content/InfoBar"]
-layout_mode = 0
+[node name="Content_InfoBar#TeleportButton" type="TextureButton" parent="."]
+offset_left = 456.0
+offset_right = 576.0
+offset_bottom = 44.0
 
-offset_left = 456
-offset_top = 0
-offset_right = 576
-offset_bottom = 44
-
-[node name="TeleportLabel" type="Label" parent="TeleportButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 120
-offset_bottom = 44
+[node name="TeleportButton#TeleportLabel" type="Label" parent="."]
+offset_right = 120.0
+offset_bottom = 44.0
 text = "传送"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ViewToggleButton" type="TextureButton" parent="Content/InfoBar"]
-layout_mode = 0
+[node name="Content_InfoBar#ViewToggleButton" type="TextureButton" parent="."]
+offset_left = 592.0
+offset_right = 712.0
+offset_bottom = 44.0
 
-offset_left = 592
-offset_top = 0
-offset_right = 712
-offset_bottom = 44
-
-[node name="ViewToggleLabel" type="Label" parent="ViewToggleButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 120
-offset_bottom = 44
+[node name="ViewToggleButton#ViewToggleLabel" type="Label" parent="."]
+offset_right = 120.0
+offset_bottom = 44.0
 text = "切换"
 horizontal_alignment = 1
 vertical_alignment = 1
-

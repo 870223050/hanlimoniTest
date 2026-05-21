@@ -1,413 +1,331 @@
-[gd_scene load_steps=2 format=3 uid="uid://03game_screen"]
+[gd_scene load_steps=2 format=3 uid="uid://bmvpyeumtf6cg"]
 
-[ext_resource type="Script" path="res://ui/03game_screen.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://bdb0c4bn3b4a3" path="res://ui/03game_screen.gd" id="1_script"]
 
 [node name="GameScreen" type="Control"]
-layout_mode = 0
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_script")
-
 
 [node name="BackgroundRect" type="TextureRect" parent="."]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-
 [node name="TopHUD" type="Control" parent="."]
-layout_mode = 0
-offset_left = 10
-offset_top = 6
-offset_right = 950
-offset_bottom = 66
-
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 950.0
+offset_bottom = 66.0
 
 [node name="PlayerNameLabel" type="Label" parent="TopHUD"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 180
-offset_bottom = 24
-
+offset_right = 180.0
+offset_bottom = 24.0
 
 [node name="RealmLabel" type="Label" parent="TopHUD"]
 layout_mode = 0
-offset_left = 0
-offset_top = 26
-offset_right = 180
-offset_bottom = 48
-
+offset_top = 26.0
+offset_right = 180.0
+offset_bottom = 48.0
 
 [node name="RealmProgressBar" type="TextureRect" parent="TopHUD"]
 layout_mode = 0
-offset_left = 0
-offset_top = 50
-offset_right = 180
-offset_bottom = 60
-
+offset_top = 50.0
+offset_right = 180.0
+offset_bottom = 60.0
 
 [node name="LifespanLabel" type="Label" parent="TopHUD"]
 layout_mode = 0
-offset_left = 200
-offset_top = 0
-offset_right = 360
-offset_bottom = 24
-
+offset_left = 200.0
+offset_right = 360.0
+offset_bottom = 24.0
 
 [node name="SpiritStonesLabel" type="Label" parent="TopHUD"]
 layout_mode = 0
-offset_left = 200
-offset_top = 28
-offset_right = 360
-offset_bottom = 50
-
+offset_left = 200.0
+offset_top = 28.0
+offset_right = 360.0
+offset_bottom = 50.0
 
 [node name="DateTimeLabel" type="Label" parent="TopHUD"]
 layout_mode = 0
-offset_left = 680
-offset_top = 0
-offset_right = 940
-offset_bottom = 24
+offset_left = 680.0
+offset_right = 940.0
+offset_bottom = 24.0
 horizontal_alignment = 2
-
 
 [node name="LocationLabel" type="Label" parent="TopHUD"]
 layout_mode = 0
-offset_left = 680
-offset_top = 28
-offset_right = 940
-offset_bottom = 50
+offset_left = 680.0
+offset_top = 28.0
+offset_right = 940.0
+offset_bottom = 50.0
 horizontal_alignment = 2
 
-
 [node name="EventArea" type="Control" parent="."]
-layout_mode = 0
-offset_left = 160
-offset_top = 120
-offset_right = 800
-offset_bottom = 420
-
+anchors_preset = 0
+offset_left = 160.0
+offset_top = 120.0
+offset_right = 800.0
+offset_bottom = 420.0
 
 [node name="NarrationLabel" type="Label" parent="EventArea"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 640
-offset_bottom = 180
-
+offset_right = 640.0
+offset_bottom = 180.0
 
 [node name="ChoiceButton1" type="TextureButton" parent="EventArea"]
-layout_mode = 0
-offset_left = 0
-offset_top = 200
-offset_right = 640
-offset_bottom = 244
 visible = false
-
-[node name="Choice1Label" type="Label" parent="ChoiceButton1"]
 layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
+offset_top = 200.0
+offset_right = 640.0
+offset_bottom = 244.0
+
+[node name="ChoiceButton2" type="TextureButton" parent="EventArea"]
+visible = false
+layout_mode = 0
+offset_top = 254.0
+offset_right = 640.0
+offset_bottom = 298.0
+
+[node name="ChoiceButton3" type="TextureButton" parent="EventArea"]
+visible = false
+layout_mode = 0
+offset_top = 308.0
+offset_right = 640.0
+offset_bottom = 352.0
+
+[node name="ContinueButton" type="TextureButton" parent="EventArea"]
+visible = false
+layout_mode = 0
+offset_left = 240.0
+offset_top = 370.0
+offset_right = 400.0
+offset_bottom = 414.0
+
+[node name="ChoiceButton1#Choice1Label" type="Label" parent="."]
+layout_mode = 0
 offset_right = 640.0
 offset_bottom = 44.0
 text = "选项一"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ChoiceButton2" type="TextureButton" parent="EventArea"]
+[node name="ChoiceButton2#Choice2Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 0
-offset_top = 254
-offset_right = 640
-offset_bottom = 298
-visible = false
-
-[node name="Choice2Label" type="Label" parent="ChoiceButton2"]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
 offset_right = 640.0
 offset_bottom = 44.0
 text = "选项二"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ChoiceButton3" type="TextureButton" parent="EventArea"]
+[node name="ChoiceButton3#Choice3Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 0
-offset_top = 308
-offset_right = 640
-offset_bottom = 352
-visible = false
-
-[node name="Choice3Label" type="Label" parent="ChoiceButton3"]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
 offset_right = 640.0
 offset_bottom = 44.0
 text = "选项三"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-
-[node name="ContinueButton" type="TextureButton" parent="EventArea"]
+[node name="ContinueButton#ContinueLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 240
-offset_top = 370
-offset_right = 400
-offset_bottom = 414
-visible = false
-
-[node name="ContinueLabel" type="Label" parent="ContinueButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 160
-offset_bottom = 44
+offset_right = 160.0
+offset_bottom = 44.0
 text = "继续"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="IdleArea" type="Control" parent="."]
-layout_mode = 0
-offset_left = 160
-offset_top = 120
-offset_right = 800
-offset_bottom = 420
-
+anchors_preset = 0
+offset_left = 160.0
+offset_top = 120.0
+offset_right = 800.0
+offset_bottom = 420.0
 
 [node name="IdleDescLabel" type="Label" parent="IdleArea"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 640
-offset_bottom = 120
-
+offset_right = 640.0
+offset_bottom = 120.0
 
 [node name="IdleHintLabel" type="Label" parent="IdleArea"]
 layout_mode = 0
-offset_left = 0
-offset_top = 130
-offset_right = 640
-offset_bottom = 154
+offset_top = 130.0
+offset_right = 640.0
+offset_bottom = 154.0
 text = "你可以：修炼、探索周围、前往他处..."
-
 
 [node name="CultivateButton" type="TextureButton" parent="IdleArea"]
 layout_mode = 0
+offset_left = 40.0
+offset_top = 180.0
+offset_right = 200.0
+offset_bottom = 240.0
 
-offset_left = 40
-offset_top = 180
-offset_right = 200
-offset_bottom = 240
-
-[node name="CultivateLabel" type="Label" parent="CultivateButton"]
+[node name="ExploreButton" type="TextureButton" parent="IdleArea"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 160
-offset_bottom = 60
+offset_left = 240.0
+offset_top = 180.0
+offset_right = 400.0
+offset_bottom = 240.0
+
+[node name="TravelButton" type="TextureButton" parent="IdleArea"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 180.0
+offset_right = 600.0
+offset_bottom = 240.0
+
+[node name="CultivateButton#CultivateLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 60.0
 text = "修炼"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ExploreButton" type="TextureButton" parent="IdleArea"]
+[node name="ExploreButton#ExploreLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 240
-offset_top = 180
-offset_right = 400
-offset_bottom = 240
-
-[node name="ExploreLabel" type="Label" parent="ExploreButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 160
-offset_bottom = 60
+offset_right = 160.0
+offset_bottom = 60.0
 text = "外出探索"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TravelButton" type="TextureButton" parent="IdleArea"]
+[node name="TravelButton#TravelLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 440
-offset_top = 180
-offset_right = 600
-offset_bottom = 240
-
-[node name="TravelLabel" type="Label" parent="TravelButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 160
-offset_bottom = 60
+offset_right = 160.0
+offset_bottom = 60.0
 text = "游历四方"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="QuickBar" type="Control" parent="."]
-layout_mode = 0
-offset_left = 0
-offset_top = 540
-offset_right = 960
-offset_bottom = 576
-
+anchors_preset = 0
+offset_top = 540.0
+offset_right = 960.0
+offset_bottom = 576.0
 
 [node name="CharacterButton" type="TextureButton" parent="QuickBar"]
 layout_mode = 0
+offset_left = 4.0
+offset_right = 112.0
+offset_bottom = 36.0
 
-offset_left = 4
-offset_top = 0
-offset_right = 112
-offset_bottom = 36
-
-[node name="CharacterLabel" type="Label" parent="CharacterButton"]
+[node name="SkillButton" type="TextureButton" parent="QuickBar"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 36
+offset_left = 124.0
+offset_right = 232.0
+offset_bottom = 36.0
+
+[node name="InventoryButton" type="TextureButton" parent="QuickBar"]
+layout_mode = 0
+offset_left = 244.0
+offset_right = 352.0
+offset_bottom = 36.0
+
+[node name="MapButton" type="TextureButton" parent="QuickBar"]
+layout_mode = 0
+offset_left = 364.0
+offset_right = 472.0
+offset_bottom = 36.0
+
+[node name="FactionButton" type="TextureButton" parent="QuickBar"]
+layout_mode = 0
+offset_left = 484.0
+offset_right = 592.0
+offset_bottom = 36.0
+
+[node name="SocialButton" type="TextureButton" parent="QuickBar"]
+layout_mode = 0
+offset_left = 604.0
+offset_right = 712.0
+offset_bottom = 36.0
+
+[node name="QuestButton" type="TextureButton" parent="QuickBar"]
+layout_mode = 0
+offset_left = 724.0
+offset_right = 832.0
+offset_bottom = 36.0
+
+[node name="SystemButton" type="TextureButton" parent="QuickBar"]
+layout_mode = 0
+offset_left = 844.0
+offset_right = 956.0
+offset_bottom = 36.0
+
+[node name="CharacterButton#CharacterLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 36.0
 text = "人物(C)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SkillButton" type="TextureButton" parent="QuickBar"]
+[node name="SkillButton#SkillLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 124
-offset_top = 0
-offset_right = 232
-offset_bottom = 36
-
-[node name="SkillLabel" type="Label" parent="SkillButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 36
+offset_right = 108.0
+offset_bottom = 36.0
 text = "功法(K)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="InventoryButton" type="TextureButton" parent="QuickBar"]
+[node name="InventoryButton#InventoryLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 244
-offset_top = 0
-offset_right = 352
-offset_bottom = 36
-
-[node name="InventoryLabel" type="Label" parent="InventoryButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 36
+offset_right = 108.0
+offset_bottom = 36.0
 text = "背包(B)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MapButton" type="TextureButton" parent="QuickBar"]
+[node name="MapButton#MapLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 364
-offset_top = 0
-offset_right = 472
-offset_bottom = 36
-
-[node name="MapLabel" type="Label" parent="MapButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 36
+offset_right = 108.0
+offset_bottom = 36.0
 text = "地图(M)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FactionButton" type="TextureButton" parent="QuickBar"]
+[node name="FactionButton#FactionLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 484
-offset_top = 0
-offset_right = 592
-offset_bottom = 36
-
-[node name="FactionLabel" type="Label" parent="FactionButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 36
+offset_right = 108.0
+offset_bottom = 36.0
 text = "宗门(S)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SocialButton" type="TextureButton" parent="QuickBar"]
+[node name="SocialButton#SocialLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 604
-offset_top = 0
-offset_right = 712
-offset_bottom = 36
-
-[node name="SocialLabel" type="Label" parent="SocialButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 36
+offset_right = 108.0
+offset_bottom = 36.0
 text = "社交(R)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="QuestButton" type="TextureButton" parent="QuickBar"]
+[node name="QuestButton#QuestLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 724
-offset_top = 0
-offset_right = 832
-offset_bottom = 36
-
-[node name="QuestLabel" type="Label" parent="QuestButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 36
+offset_right = 108.0
+offset_bottom = 36.0
 text = "任务(Q)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SystemButton" type="TextureButton" parent="QuickBar"]
+[node name="SystemButton#SystemLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 844
-offset_top = 0
-offset_right = 956
-offset_bottom = 36
-
-[node name="SystemLabel" type="Label" parent="SystemButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 112
-offset_bottom = 36
+offset_right = 112.0
+offset_bottom = 36.0
 text = "系统(Esc)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ToastLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 660
-offset_top = 500
-offset_right = 950
-offset_bottom = 530
-horizontal_alignment = 2
 visible = false
-
+layout_mode = 0
+offset_left = 660.0
+offset_top = 500.0
+offset_right = 950.0
+offset_bottom = 530.0
+horizontal_alignment = 2

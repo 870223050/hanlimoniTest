@@ -1,178 +1,136 @@
-[gd_scene load_steps=2 format=3 uid="uid://10quest_panel"]
+[gd_scene load_steps=2 format=3 uid="uid://d3vy22lg6nb22"]
 
-[ext_resource type="Script" path="res://ui/10quest_panel.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://cq3so7n2fpyt4" path="res://ui/10quest_panel.gd" id="1_script"]
 
 [node name="QuestPanel" type="CanvasLayer"]
 script = ExtResource("1_script")
 
-
 [node name="Overlay" type="ColorRect" parent="."]
-layout_mode = 0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.0, 0.0, 0.0, 0.5)
-
+color = Color(0, 0, 0, 0.5)
 
 [node name="PanelFrame" type="Control" parent="."]
-layout_mode = 0
-offset_left = 80
-offset_top = 40
-offset_right = 880
-offset_bottom = 600
-
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 880.0
+offset_bottom = 600.0
 
 [node name="TitleBg" type="TextureRect" parent="PanelFrame"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 800
-offset_bottom = 40
-
+offset_right = 800.0
+offset_bottom = 40.0
 
 [node name="TitleLabel" type="Label" parent="PanelFrame"]
 layout_mode = 0
-offset_left = 12
-offset_top = 8
-offset_right = 200
-offset_bottom = 32
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 32.0
 text = "任务"
-
 
 [node name="CloseButton" type="TextureButton" parent="PanelFrame"]
 layout_mode = 0
+offset_left = 760.0
+offset_top = 4.0
+offset_right = 792.0
+offset_bottom = 36.0
 
-offset_left = 760
-offset_top = 4
-offset_right = 792
-offset_bottom = 36
+[node name="Content" type="Control" parent="PanelFrame"]
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 800.0
+offset_bottom = 560.0
 
-[node name="CloseLabel" type="Label" parent="CloseButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 32
-offset_bottom = 32
+[node name="CloseButton#CloseLabel" type="Label" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Content" type="Control" parent="PanelFrame"]
-layout_mode = 0
-offset_left = 0
-offset_top = 44
-offset_right = 800
-offset_bottom = 560
+[node name="Content#TabOngoing" type="TextureButton" parent="."]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 140.0
+offset_bottom = 40.0
 
-
-[node name="TabOngoing" type="TextureButton" parent="Content"]
-layout_mode = 0
-
-offset_left = 12
-offset_top = 8
-offset_right = 140
-offset_bottom = 40
-
-[node name="TabOngoingLabel" type="Label" parent="TabOngoing"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 128
-offset_bottom = 32
+[node name="TabOngoing#TabOngoingLabel" type="Label" parent="."]
+offset_right = 128.0
+offset_bottom = 32.0
 text = "进行中"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TabCompleted" type="TextureButton" parent="Content"]
-layout_mode = 0
+[node name="Content#TabCompleted" type="TextureButton" parent="."]
+offset_left = 152.0
+offset_top = 8.0
+offset_right = 280.0
+offset_bottom = 40.0
 
-offset_left = 152
-offset_top = 8
-offset_right = 280
-offset_bottom = 40
-
-[node name="TabCompletedLabel" type="Label" parent="TabCompleted"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 128
-offset_bottom = 32
+[node name="TabCompleted#TabCompletedLabel" type="Label" parent="."]
+offset_right = 128.0
+offset_bottom = 32.0
 text = "已完成"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="QuestDetail" type="Control" parent="Content"]
-layout_mode = 0
-offset_left = 304
-offset_top = 8
-offset_right = 792
-offset_bottom = 516
+[node name="Content#QuestDetail" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 304.0
+offset_top = 8.0
+offset_right = 792.0
+offset_bottom = 516.0
 
+[node name="Content_QuestDetail#QuestNameLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_right = 400.0
+offset_bottom = 30.0
 
-[node name="QuestNameLabel" type="Label" parent="Content/QuestDetail"]
-layout_mode = 0
-offset_left = 8
-offset_top = 0
-offset_right = 400
-offset_bottom = 30
+[node name="Content_QuestDetail#QuestDescLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 484.0
+offset_bottom = 200.0
 
+[node name="Content_QuestDetail#QuestProgressLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 210.0
+offset_right = 400.0
+offset_bottom = 234.0
 
-[node name="QuestDescLabel" type="Label" parent="Content/QuestDetail"]
-layout_mode = 0
-offset_left = 8
-offset_top = 40
-offset_right = 484
-offset_bottom = 200
+[node name="Content_QuestDetail#QuestRewardLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 244.0
+offset_right = 484.0
+offset_bottom = 280.0
 
+[node name="Content_QuestDetail#TrackButton" type="TextureButton" parent="."]
+offset_left = 8.0
+offset_top = 300.0
+offset_right = 148.0
+offset_bottom = 344.0
 
-[node name="QuestProgressLabel" type="Label" parent="Content/QuestDetail"]
-layout_mode = 0
-offset_left = 8
-offset_top = 210
-offset_right = 400
-offset_bottom = 234
-
-
-[node name="QuestRewardLabel" type="Label" parent="Content/QuestDetail"]
-layout_mode = 0
-offset_left = 8
-offset_top = 244
-offset_right = 484
-offset_bottom = 280
-
-
-[node name="TrackButton" type="TextureButton" parent="Content/QuestDetail"]
-layout_mode = 0
-
-offset_left = 8
-offset_top = 300
-offset_right = 148
-offset_bottom = 344
-
-[node name="TrackLabel" type="Label" parent="TrackButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 44
+[node name="TrackButton#TrackLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 44.0
 text = "追踪"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AbandonButton" type="TextureButton" parent="Content/QuestDetail"]
-layout_mode = 0
+[node name="Content_QuestDetail#AbandonButton" type="TextureButton" parent="."]
+offset_left = 160.0
+offset_top = 300.0
+offset_right = 300.0
+offset_bottom = 344.0
 
-offset_left = 160
-offset_top = 300
-offset_right = 300
-offset_bottom = 344
-
-[node name="AbandonLabel" type="Label" parent="AbandonButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 44
+[node name="AbandonButton#AbandonLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 44.0
 text = "放弃"
 horizontal_alignment = 1
 vertical_alignment = 1
-

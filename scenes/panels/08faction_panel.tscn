@@ -1,230 +1,175 @@
-[gd_scene load_steps=2 format=3 uid="uid://08faction_panel"]
+[gd_scene load_steps=2 format=3 uid="uid://cl78riqes2cwk"]
 
-[ext_resource type="Script" path="res://ui/08faction_panel.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dwfkcfhy1app1" path="res://ui/08faction_panel.gd" id="1_script"]
 
 [node name="FactionPanel" type="CanvasLayer"]
 script = ExtResource("1_script")
 
-
 [node name="Overlay" type="ColorRect" parent="."]
-layout_mode = 0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.0, 0.0, 0.0, 0.5)
-
+color = Color(0, 0, 0, 0.5)
 
 [node name="PanelFrame" type="Control" parent="."]
-layout_mode = 0
-offset_left = 80
-offset_top = 40
-offset_right = 880
-offset_bottom = 600
-
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 880.0
+offset_bottom = 600.0
 
 [node name="TitleBg" type="TextureRect" parent="PanelFrame"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 800
-offset_bottom = 40
-
+offset_right = 800.0
+offset_bottom = 40.0
 
 [node name="TitleLabel" type="Label" parent="PanelFrame"]
 layout_mode = 0
-offset_left = 12
-offset_top = 8
-offset_right = 200
-offset_bottom = 32
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 32.0
 text = "宗门"
-
 
 [node name="CloseButton" type="TextureButton" parent="PanelFrame"]
 layout_mode = 0
+offset_left = 760.0
+offset_top = 4.0
+offset_right = 792.0
+offset_bottom = 36.0
 
-offset_left = 760
-offset_top = 4
-offset_right = 792
-offset_bottom = 36
+[node name="Content" type="Control" parent="PanelFrame"]
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 800.0
+offset_bottom = 560.0
 
-[node name="CloseLabel" type="Label" parent="CloseButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 32
-offset_bottom = 32
+[node name="CloseButton#CloseLabel" type="Label" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Content" type="Control" parent="PanelFrame"]
-layout_mode = 0
-offset_left = 0
-offset_top = 44
-offset_right = 800
-offset_bottom = 560
+[node name="Content#FactionNameLabel" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 400.0
+offset_bottom = 36.0
 
+[node name="Content#LeaderLabel" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 400.0
+offset_bottom = 68.0
 
-[node name="FactionNameLabel" type="Label" parent="Content"]
-layout_mode = 0
-offset_left = 12
-offset_top = 8
-offset_right = 400
-offset_bottom = 36
+[node name="Content#MemberCountLabel" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 76.0
+offset_right = 300.0
+offset_bottom = 98.0
 
+[node name="Content#PersonalRankLabel" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 76.0
+offset_right = 600.0
+offset_bottom = 98.0
 
-[node name="LeaderLabel" type="Label" parent="Content"]
-layout_mode = 0
-offset_left = 12
-offset_top = 44
-offset_right = 400
-offset_bottom = 68
+[node name="Content#ReputationLabel" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 106.0
+offset_right = 300.0
+offset_bottom = 128.0
 
+[node name="Content#ContributionLabel" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 106.0
+offset_right = 600.0
+offset_bottom = 128.0
 
-[node name="MemberCountLabel" type="Label" parent="Content"]
-layout_mode = 0
-offset_left = 12
-offset_top = 76
-offset_right = 300
-offset_bottom = 98
+[node name="Content#TabMission" type="TextureButton" parent="."]
+offset_left = 12.0
+offset_top = 150.0
+offset_right = 120.0
+offset_bottom = 182.0
 
-
-[node name="PersonalRankLabel" type="Label" parent="Content"]
-layout_mode = 0
-offset_left = 320
-offset_top = 76
-offset_right = 600
-offset_bottom = 98
-
-
-[node name="ReputationLabel" type="Label" parent="Content"]
-layout_mode = 0
-offset_left = 12
-offset_top = 106
-offset_right = 300
-offset_bottom = 128
-
-
-[node name="ContributionLabel" type="Label" parent="Content"]
-layout_mode = 0
-offset_left = 320
-offset_top = 106
-offset_right = 600
-offset_bottom = 128
-
-
-[node name="TabMission" type="TextureButton" parent="Content"]
-layout_mode = 0
-
-offset_left = 12
-offset_top = 150
-offset_right = 120
-offset_bottom = 182
-
-[node name="TabMissionLabel" type="Label" parent="TabMission"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 32
+[node name="TabMission#TabMissionLabel" type="Label" parent="."]
+offset_right = 108.0
+offset_bottom = 32.0
 text = "任务"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TabShop" type="TextureButton" parent="Content"]
-layout_mode = 0
+[node name="Content#TabShop" type="TextureButton" parent="."]
+offset_left = 132.0
+offset_top = 150.0
+offset_right = 240.0
+offset_bottom = 182.0
 
-offset_left = 132
-offset_top = 150
-offset_right = 240
-offset_bottom = 182
-
-[node name="TabShopLabel" type="Label" parent="TabShop"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 32
+[node name="TabShop#TabShopLabel" type="Label" parent="."]
+offset_right = 108.0
+offset_bottom = 32.0
 text = "商店"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TabLibrary" type="TextureButton" parent="Content"]
-layout_mode = 0
+[node name="Content#TabLibrary" type="TextureButton" parent="."]
+offset_left = 252.0
+offset_top = 150.0
+offset_right = 360.0
+offset_bottom = 182.0
 
-offset_left = 252
-offset_top = 150
-offset_right = 360
-offset_bottom = 182
-
-[node name="TabLibraryLabel" type="Label" parent="TabLibrary"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 32
+[node name="TabLibrary#TabLibraryLabel" type="Label" parent="."]
+offset_right = 108.0
+offset_bottom = 32.0
 text = "功法阁"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TabFacility" type="TextureButton" parent="Content"]
-layout_mode = 0
+[node name="Content#TabFacility" type="TextureButton" parent="."]
+offset_left = 372.0
+offset_top = 150.0
+offset_right = 480.0
+offset_bottom = 182.0
 
-offset_left = 372
-offset_top = 150
-offset_right = 480
-offset_bottom = 182
-
-[node name="TabFacilityLabel" type="Label" parent="TabFacility"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 108
-offset_bottom = 32
+[node name="TabFacility#TabFacilityLabel" type="Label" parent="."]
+offset_right = 108.0
+offset_bottom = 32.0
 text = "设施"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TabContent" type="Control" parent="Content"]
-layout_mode = 0
-offset_left = 12
-offset_top = 192
-offset_right = 788
-offset_bottom = 480
+[node name="Content#TabContent" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 192.0
+offset_right = 788.0
+offset_bottom = 480.0
 
+[node name="Content#ContributeButton" type="TextureButton" parent="."]
+offset_left = 600.0
+offset_top = 150.0
+offset_right = 740.0
+offset_bottom = 198.0
 
-[node name="ContributeButton" type="TextureButton" parent="Content"]
-layout_mode = 0
-
-offset_left = 600
-offset_top = 150
-offset_right = 740
-offset_bottom = 198
-
-[node name="ContributeLabel" type="Label" parent="ContributeButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 48
+[node name="ContributeButton#ContributeLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 48.0
 text = "贡献"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LeaveFactionButton" type="TextureButton" parent="Content"]
-layout_mode = 0
+[node name="Content#LeaveFactionButton" type="TextureButton" parent="."]
+offset_left = 600.0
+offset_top = 210.0
+offset_right = 740.0
+offset_bottom = 258.0
 
-offset_left = 600
-offset_top = 210
-offset_right = 740
-offset_bottom = 258
-
-[node name="LeaveFactionLabel" type="Label" parent="LeaveFactionButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 140
-offset_bottom = 48
+[node name="LeaveFactionButton#LeaveFactionLabel" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 48.0
 text = "离开"
 horizontal_alignment = 1
 vertical_alignment = 1
-

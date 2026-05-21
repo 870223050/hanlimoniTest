@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://g5glbeqslu71"]
+
+[ext_resource type="Script" uid="uid://c6gm2bamqs687" path="res://test/test.gd" id="1_syuel"]
+
+[node name="Test" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_syuel")
+
+[node name="ExploreButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 69.0
+offset_right = 660.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 15
+text = "请求LLM生成event列表"
+
+[node name="ExploreButton2" type="Button" parent="."]
+offset_left = 166.0
+offset_top = 70.0
+offset_right = 371.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 15
+text = "请求LLM服务请求"
+
+[node name="EventList" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EventListContainer" type="VBoxContainer" parent="EventList"]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 255.0
+offset_right = 637.0
+offset_bottom = 385.0
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="EventList/EventListContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "事件1"
+
+[node name="Button2" type="Button" parent="EventList/EventListContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "事件2"
+
+[node name="Button3" type="Button" parent="EventList/EventListContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "事件3"
+
+[node name="NarrationLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 144.0
+offset_right = 1133.0
+offset_bottom = 242.0

@@ -1,328 +1,278 @@
-[gd_scene load_steps=2 format=3 uid="uid://02char_create"]
+[gd_scene load_steps=2 format=3 uid="uid://bteouysvx6ucc"]
 
-[ext_resource type="Script" path="res://ui/02char_create.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dndgk52ycylts" path="res://ui/02char_create.gd" id="1_script"]
 
 [node name="CharCreate" type="Control"]
-layout_mode = 0
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_script")
-
 
 [node name="BackgroundRect" type="TextureRect" parent="."]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-
 [node name="StepIndicator" type="Control" parent="."]
-layout_mode = 0
-offset_left = 380
-offset_top = 20
-offset_right = 580
-offset_bottom = 48
-
+anchors_preset = 0
+offset_left = 380.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 48.0
 
 [node name="StepDot1" type="TextureRect" parent="StepIndicator"]
 layout_mode = 0
-offset_left = 0
-offset_top = 4
-offset_right = 32
-offset_bottom = 36
-
+offset_top = 4.0
+offset_right = 32.0
+offset_bottom = 36.0
 
 [node name="StepDot2" type="TextureRect" parent="StepIndicator"]
 layout_mode = 0
-offset_left = 56
-offset_top = 4
-offset_right = 88
-offset_bottom = 36
-
+offset_left = 56.0
+offset_top = 4.0
+offset_right = 88.0
+offset_bottom = 36.0
 
 [node name="StepDot3" type="TextureRect" parent="StepIndicator"]
 layout_mode = 0
-offset_left = 112
-offset_top = 4
-offset_right = 144
-offset_bottom = 36
-
+offset_left = 112.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 36.0
 
 [node name="StepDot4" type="TextureRect" parent="StepIndicator"]
 layout_mode = 0
-offset_left = 168
-offset_top = 4
-offset_right = 200
-offset_bottom = 36
-
+offset_left = 168.0
+offset_top = 4.0
+offset_right = 200.0
+offset_bottom = 36.0
 
 [node name="Step1Container" type="Control" parent="."]
-layout_mode = 0
-offset_left = 280
-offset_top = 80
-offset_right = 680
-offset_bottom = 440
-visible = true
-
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 80.0
+offset_right = 680.0
+offset_bottom = 440.0
 
 [node name="NameLabel" type="Label" parent="Step1Container"]
 layout_mode = 0
-offset_left = 0
-offset_top = 20
-offset_right = 100
-offset_bottom = 44
+offset_top = 20.0
+offset_right = 100.0
+offset_bottom = 44.0
 text = "道号"
-
 
 [node name="NameInput" type="LineEdit" parent="Step1Container"]
 layout_mode = 0
-offset_left = 110
-offset_top = 20
-offset_right = 290
-offset_bottom = 44
+offset_left = 110.0
+offset_top = 20.0
+offset_right = 290.0
+offset_bottom = 44.0
 placeholder_text = "请输入道号（2-6个汉字）"
-
 
 [node name="MaleButton" type="TextureButton" parent="Step1Container"]
 layout_mode = 0
+offset_top = 80.0
+offset_right = 120.0
+offset_bottom = 140.0
 
-offset_left = 0
-offset_top = 80
-offset_right = 120
-offset_bottom = 140
-
-[node name="MaleLabel" type="Label" parent="MaleButton"]
+[node name="FemaleButton" type="TextureButton" parent="Step1Container"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 120
-offset_bottom = 60
+offset_left = 150.0
+offset_top = 80.0
+offset_right = 270.0
+offset_bottom = 140.0
+
+[node name="RandomNameButton" type="TextureButton" parent="Step1Container"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 160.0
+offset_right = 290.0
+offset_bottom = 200.0
+
+[node name="MaleButton#MaleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 60.0
 text = "男"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FemaleButton" type="TextureButton" parent="Step1Container"]
+[node name="FemaleButton#FemaleLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 150
-offset_top = 80
-offset_right = 270
-offset_bottom = 140
-
-[node name="FemaleLabel" type="Label" parent="FemaleButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 120
-offset_bottom = 60
+offset_right = 120.0
+offset_bottom = 60.0
 text = "女"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RandomNameButton" type="TextureButton" parent="Step1Container"]
+[node name="RandomNameButton#RandomNameLabel" type="Label" parent="."]
 layout_mode = 0
-
-offset_left = 110
-offset_top = 160
-offset_right = 290
-offset_bottom = 200
-
-[node name="RandomNameLabel" type="Label" parent="RandomNameButton"]
-layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 180
-offset_bottom = 40
+offset_right = 180.0
+offset_bottom = 40.0
 text = "随机道号"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Step2Container" type="Control" parent="."]
-layout_mode = 0
-offset_left = 280
-offset_top = 80
-offset_right = 680
-offset_bottom = 440
 visible = false
-
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 80.0
+offset_right = 680.0
+offset_bottom = 440.0
 
 [node name="RootGoldIcon" type="TextureRect" parent="Step2Container"]
 layout_mode = 0
-offset_left = 20
-offset_top = 40
-offset_right = 80
-offset_bottom = 100
-
+offset_left = 20.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 100.0
 
 [node name="RootWoodIcon" type="TextureRect" parent="Step2Container"]
 layout_mode = 0
-offset_left = 100
-offset_top = 40
-offset_right = 160
-offset_bottom = 100
-
+offset_left = 100.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 100.0
 
 [node name="RootWaterIcon" type="TextureRect" parent="Step2Container"]
 layout_mode = 0
-offset_left = 180
-offset_top = 40
-offset_right = 240
-offset_bottom = 100
-
+offset_left = 180.0
+offset_top = 40.0
+offset_right = 240.0
+offset_bottom = 100.0
 
 [node name="RootFireIcon" type="TextureRect" parent="Step2Container"]
 layout_mode = 0
-offset_left = 260
-offset_top = 40
-offset_right = 320
-offset_bottom = 100
-
+offset_left = 260.0
+offset_top = 40.0
+offset_right = 320.0
+offset_bottom = 100.0
 
 [node name="RootEarthIcon" type="TextureRect" parent="Step2Container"]
 layout_mode = 0
-offset_left = 340
-offset_top = 40
-offset_right = 400
-offset_bottom = 100
-
+offset_left = 340.0
+offset_top = 40.0
+offset_right = 400.0
+offset_bottom = 100.0
 
 [node name="RootResultLabel" type="Label" parent="Step2Container"]
 layout_mode = 0
-offset_left = 20
-offset_top = 120
-offset_right = 380
-offset_bottom = 148
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 380.0
+offset_bottom = 148.0
 text = "灵根类型将显示在此处"
-
 
 [node name="RerollRootButton" type="TextureButton" parent="Step2Container"]
 layout_mode = 0
+offset_left = 100.0
+offset_top = 170.0
+offset_right = 300.0
+offset_bottom = 218.0
 
-offset_left = 100
-offset_top = 170
-offset_right = 300
-offset_bottom = 218
-
-[node name="RerollRootLabel" type="Label" parent="RerollRootButton"]
+[node name="RerollRootButton#RerollRootLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 200
-offset_bottom = 48
+offset_right = 200.0
+offset_bottom = 48.0
 text = "重铸灵根"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Step3Container" type="Control" parent="."]
-layout_mode = 0
-offset_left = 280
-offset_top = 80
-offset_right = 680
-offset_bottom = 440
 visible = false
-
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 80.0
+offset_right = 680.0
+offset_bottom = 440.0
 
 [node name="AttrDisplayRect" type="TextureRect" parent="Step3Container"]
 layout_mode = 0
-offset_left = 20
-offset_top = 20
-offset_right = 380
-offset_bottom = 220
-
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 380.0
+offset_bottom = 220.0
 
 [node name="RerollAttrButton" type="TextureButton" parent="Step3Container"]
 layout_mode = 0
+offset_left = 100.0
+offset_top = 250.0
+offset_right = 300.0
+offset_bottom = 298.0
 
-offset_left = 100
-offset_top = 250
-offset_right = 300
-offset_bottom = 298
-
-[node name="RerollAttrLabel" type="Label" parent="RerollAttrButton"]
+[node name="RerollAttrButton#RerollAttrLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 200
-offset_bottom = 48
+offset_right = 200.0
+offset_bottom = 48.0
 text = "重铸属性"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Step4Container" type="Control" parent="."]
-layout_mode = 0
-offset_left = 280
-offset_top = 80
-offset_right = 680
-offset_bottom = 440
 visible = false
-
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 80.0
+offset_right = 680.0
+offset_bottom = 440.0
 
 [node name="SummaryLabel" type="Label" parent="Step4Container"]
 layout_mode = 0
-offset_left = 20
-offset_top = 20
-offset_right = 380
-offset_bottom = 160
-
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 380.0
+offset_bottom = 160.0
 
 [node name="StoryLabel" type="Label" parent="Step4Container"]
 layout_mode = 0
-offset_left = 20
-offset_top = 170
-offset_right = 380
-offset_bottom = 300
-
+offset_left = 20.0
+offset_top = 170.0
+offset_right = 380.0
+offset_bottom = 300.0
 
 [node name="ConfirmButton" type="TextureButton" parent="Step4Container"]
 layout_mode = 0
+offset_left = 60.0
+offset_top = 320.0
+offset_right = 340.0
+offset_bottom = 368.0
 
-offset_left = 60
-offset_top = 320
-offset_right = 340
-offset_bottom = 368
-
-[node name="ConfirmLabel" type="Label" parent="ConfirmButton"]
+[node name="ConfirmButton#ConfirmLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 280
-offset_bottom = 48
+offset_right = 280.0
+offset_bottom = 48.0
 text = "踏入仙途"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PrevButton" type="TextureButton" parent="."]
 layout_mode = 0
-
-offset_left = 280
-offset_top = 480
-offset_right = 400
-offset_bottom = 528
+offset_left = 280.0
+offset_top = 480.0
+offset_right = 400.0
+offset_bottom = 528.0
 
 [node name="PrevLabel" type="Label" parent="PrevButton"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 120
-offset_bottom = 48
+offset_right = 120.0
+offset_bottom = 48.0
 text = "上一步"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="NextButton" type="TextureButton" parent="."]
 layout_mode = 0
-
-offset_left = 560
-offset_top = 480
-offset_right = 680
-offset_bottom = 528
+offset_left = 560.0
+offset_top = 480.0
+offset_right = 680.0
+offset_bottom = 528.0
 
 [node name="NextLabel" type="Label" parent="NextButton"]
 layout_mode = 0
-offset_left = 0
-offset_top = 0
-offset_right = 120
-offset_bottom = 48
+offset_right = 120.0
+offset_bottom = 48.0
 text = "下一步"
 horizontal_alignment = 1
 vertical_alignment = 1
-
